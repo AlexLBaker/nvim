@@ -4,10 +4,10 @@ return {
     defaults = {
       file_ignore_patterns = {
         "%.git/",
-        "build/",
-        "dist/",
+        "build/.*",
+        "dist/.*",
         "%.lock",
-        "__pycache__/",
+        "__pycache__/.*",
         "%.pyc",
         "%.pyo",
         "%.xlsx",
