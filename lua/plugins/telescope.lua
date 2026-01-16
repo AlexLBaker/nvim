@@ -10,6 +10,7 @@ return {
         "__pycache__/",
         "%.pyc",
         "%.pyo",
+        "%.xlsx",
       },
     },
   },
