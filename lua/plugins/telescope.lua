@@ -4,6 +4,8 @@ return {
     defaults = {
       file_ignore_patterns = {
         "%.git/",
+        ".venv/.*",
+        "venv/.*",
         "build/.*",
         "dist/.*",
         "%.lock",
