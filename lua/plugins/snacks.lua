@@ -1,33 +1,18 @@
 return {
-  "folke/snacks.nvim",
-  opts = {
-    picker = {
-      -- This applies to all picker sources (files, grep, etc.)
-      exclude = {
-        ".git",
-        ".venv",
-        "venv",
-        "build",
-        "dist",
-        "__pycache__",
-      },
-      -- Pattern matching for specific file extensions
-      matchers = {
-        file_filter = function(item)
-          local patterns = {
-            "%.lock$",
-            "%.pyc$",
-            "%.pyo$",
-            "%.xlsx$",
-          }
-          for _, p in ipairs(patterns) do
-            if item.file:find(p) then
-              return false
-            end
-          end
-          return true
-        end,
-      },
-    },
-  },
+  "folke/snacks.nvim",
+  opts = {
+    picker = {
+      -- This targets the actual search logic
+      sources = {
+        files = {
+          -- hidden = true, -- show hidden files (.dotfiles)
+          ignored = false, -- keep this false to respect .gitignore
+          exclude = {
+            ".git", ".venv", "venv", "build", "dist", "__pycache__",
+            "*.lock", "*.pyc", "*.pyo", "*.xlsx", "__init__.py"
+          },
+        },
+      },
+    },
+  },
 }
