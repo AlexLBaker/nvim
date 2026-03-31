@@ -1,19 +1,30 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     opts = {
-      theme = "dragon",
-      background = {
-        dark = "dragon",
+      flavour = "mocha",
+      transparent_background = false,
+      integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = true,
+        mini = true,
+        native_lsp = {
+          enabled = true,
+        },
+        telescope = true,
+        which_key = true,
       },
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-dragon",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
