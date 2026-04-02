@@ -1,11 +1,19 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    terminal = {
+      win = {
+        style = "float",
+        border = "rounded",
+        width = 0.95,
+        height = 0.95,
+      },
+    },
     picker = {
       sources = {
         files = {
           hidden = true,
-          ignored = false, -- keep this false to respect .gitignore
+          ignored = true,
           exclude = {
             ".git",
             ".venv",
