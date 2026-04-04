@@ -11,6 +11,13 @@ return {
     },
     picker = {
       sources = {
+        explorer = {
+          layout = {
+            layout = {
+              width = 30,
+            },
+          },
+        },
         files = {
           hidden = true,
           ignored = true,
