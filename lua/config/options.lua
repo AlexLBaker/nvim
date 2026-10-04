@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.opt.mouse = "a"
+vim.g.lazyvim_python_lsp = "basedpyright"
